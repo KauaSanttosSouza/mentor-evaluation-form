@@ -1,0 +1,267 @@
+* {
+  margin: 0px;
+  padding: 0px;
+
+  box-sizing: border-box;
+  
+}
+
+:root{ /*VARIAVEIS*/
+  
+  /*FUNDOS*/
+  --bg-pag: hsl(202, 41%, 82%);
+  --bg-pag-top: hsl(218, 23%, 21%);
+  --bg-form-before: hsl(6, 89%, 69%);
+
+  --border: #E6E6F0;
+
+  /*FONTES*/
+  font-size: 62.2%;
+  --ff-heading: 'Staatliches', cursive;
+  --ff-texting: 'Poppins', sans-serif;
+
+  --fs-tittle-pag: 3.6rem;
+  --fs-tittle-form: 2.4rem;
+  --fs-texting-pag: 1.6rem;
+  --fs-input: 1.4rem;
+
+}
+
+body {
+  background: var(--bg-pag);
+}
+
+body:before {
+  content: '';
+  background: var(--bg-pag-top);
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 46.5rem;
+  z-index: -1;
+}
+
+.page {
+  text-align: center;
+  margin: 10.7rem auto;
+
+  width: 750px;
+}
+
+header h1 {
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  
+  font-size: var(--fs-tittle-pag);
+  line-height: 4.5rem;
+
+  color: white;
+}
+
+input, textarea, select {
+  padding: 1.5rem;
+}
+
+header p {
+  font-family: var(--ff-texting);
+  font-weight: 400;
+
+  font-size: var(--fs-texting-pag);
+  line-height: 2.4rem;
+
+  color: white;
+  
+  margin-bottom: 2rem;
+}
+
+header h2 {
+  padding: 50px 275px;
+  background: var(--bg-form-before);
+  border-radius: 2rem 2rem 0 0;
+
+  font-size: var(--fs-tittle-form);
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  color: white;
+
+  margin-top: 3.2rem;
+}
+
+form {
+  min-height: 30rem;
+  padding: 3.1rem 6.4rem 6.4rem;
+
+  background: white;
+
+  border-radius: 0 0 20px 20px;
+}
+
+fieldset {
+  border: none;
+}
+
+form span {
+  color: hsl(258, 14%, 77%, 1);
+}
+
+span:hover {
+  
+  color: rgb(104, 104, 104);
+}
+
+.input-wrapper {
+  text-align: left;
+
+  font-family: var(--ff-texting);
+  font-size: var(--fs-input);
+  line-height: 2.4rem;
+}
+
+form .input-wrapper input, select {
+  background: #FAFAFC;
+
+  width: 100%;
+  height: 5.5rem;
+
+  border-radius: 8px;
+  border: 1px solid var(--border);
+
+  margin-top: 8px;
+}
+
+.input-wrapper + .input-wrapper {
+  margin-bottom: 1.6rem;
+}
+
+.col-2 {
+  display: flex;
+  gap: 2.2rem;
+  justify-content: space-between;
+}
+
+.col-2 div {
+  width: 100%;
+}
+
+legend {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-tittle-form);
+  line-height: 3.4rem;
+  font-weight: 400;
+
+  color: #253B51;
+
+  margin: 3.2rem auto 4rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border);
+}
+
+select {
+  width: 30rem;
+  display: block;
+
+  appearance: none;
+  -webkit-appearance: none;
+  margin-bottom: 3.2rem;
+}
+
+textarea {
+  display: block;
+  
+  width: 100%;
+  height: 16.6rem;
+
+  border: 1px solid var(--border);
+
+  margin-top: 0.8rem;
+}
+
+.checkbox-wrapper {
+  font-family: var(--ff-texting);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  gap: 0.8rem; 
+  align-items: center;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 2.4rem;
+  height: 2.4rem;
+
+  opacity: 0;
+}
+
+.checkbox-wrapper label::before {
+  content: '';
+
+  width: 2.4rem;
+  height: 2.4rem;
+  display: block;
+  
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: #FAFAFC;
+
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_834_20)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_834_20'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.col-3 {
+  display: flex;
+}
+
+.col-3 div {
+  width: 100%;
+}
+
+.col-3 > div:nth-child(1) {
+  width: 30rem;
+  margin-right: 3.2rem;
+}
+
+.col-3 > div:nth-child(2) {
+  width: 14rem;
+  margin: 0 1rem 0 0;
+}
+
+.col-3 > div:nth-child(3) {
+  width: 14rem;
+  margin: 0;
+}
+
+form button {
+  padding: 1.3rem 28.6rem;
+  margin-top: 6.4rem;
+
+  border-radius: 8px;
+  border: none;
+  
+  background: var(--bg-form-before);
+  color: white;
+
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+
+button:hover {
+  background: #cf4e3f;
+}
